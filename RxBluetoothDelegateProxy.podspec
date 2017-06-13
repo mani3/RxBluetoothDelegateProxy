@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/mani-mani/RxBluetoothDelegateProxy'
+  s.homepage         = 'https://github.com/mani3/RxBluetoothDelegateProxy'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'mani-mani' => 'kazuya.4da@gmail.com' }
+  s.author           = { 'mani3' => 'kazuya.4da@gmail.com' }
   s.source           = { :git => 'https://github.com/mani-mani/RxBluetoothDelegateProxy.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'RxBluetoothDelegateProxy/Classes/**/*'
   
@@ -39,4 +39,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'RxSwift', '~> 3.5'
+  s.dependency 'RxCocoa', '~> 3.5'
 end

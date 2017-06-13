@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'RxBluetoothDelegateProxy_Example' do
   pod 'RxBluetoothDelegateProxy', :path => '../'
+  pod 'RxSwift', '~> 3.0'
+  pod 'RxCocoa', '~> 3.0'
 
   target 'RxBluetoothDelegateProxy_Tests' do
     inherit! :search_paths
