@@ -1,0 +1,25 @@
+PODS:
+  - RxBluetoothDelegateProxy (0.1.0):
+    - RxCocoa (~> 3.5)
+    - RxSwift (~> 3.5)
+  - RxCocoa (3.5.0):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.5.0)
+
+DEPENDENCIES:
+  - RxBluetoothDelegateProxy (from `../`)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+
+EXTERNAL SOURCES:
+  RxBluetoothDelegateProxy:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RxBluetoothDelegateProxy: 4063a5370f4c3d84aa94469404d066af6bdde264
+  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
+
+PODFILE CHECKSUM: 82c47324bf5debbff9c63242c566bc1ce31dc834
+
+COCOAPODS: 1.2.1
