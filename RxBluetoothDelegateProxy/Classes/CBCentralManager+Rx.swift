@@ -22,7 +22,7 @@ extension Reactive where Base: CBCentralManager {
             .map { a in try castOrThrow(CBCentralManager.self, a[0]) }
     }
     
-    public var discovered: Observable<(peripheral: CBPeripheral, data: [String: Any], rssi: NSNumber)> {
+    public var didDiscover: Observable<(peripheral: CBPeripheral, data: [String: Any], rssi: NSNumber)> {
         return delegate
             .methodInvoked(#selector(CBCentralManagerDelegate.centralManager(_:didDiscover:advertisementData:rssi:)))
             .map { (a) in
@@ -33,13 +33,13 @@ extension Reactive where Base: CBCentralManager {
             }
     }
     
-    public var connected: Observable<CBPeripheral> {
+    public var didConnect: Observable<CBPeripheral> {
         return delegate
             .methodInvoked(#selector(CBCentralManagerDelegate.centralManager(_:didConnect:)))
             .map { a in try castOrThrow(CBPeripheral.self, a[1]) }
     }
     
-    public var failedToConnect: Observable<(peripheral: CBPeripheral, error: Error?)> {
+    public var didFailToConnect: Observable<(peripheral: CBPeripheral, error: Error?)> {
         return delegate
             .methodInvoked(#selector(CBCentralManagerDelegate.centralManager(_:didFailToConnect:error:)))
             .map { a in
@@ -49,7 +49,7 @@ extension Reactive where Base: CBCentralManager {
             }
     }
     
-    public var disconnected: Observable<(peripheral: CBPeripheral, error: Error?)> {
+    public var didDisconnect: Observable<(peripheral: CBPeripheral, error: Error?)> {
         return delegate
             .methodInvoked(#selector(CBCentralManagerDelegate.centralManager(_:didDisconnectPeripheral:error:)))
             .map { a in

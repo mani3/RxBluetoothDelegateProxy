@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             .subscribe()
             .addDisposableTo(disposeBag)
         
-        manager.rx.discovered
+        manager.rx.didDiscover
             .map { (peripheral, data, rssi) -> CBPeripheral in
                 print(peripheral.debugDescription, data.debugDescription, rssi.debugDescription)
                 return peripheral
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                 onNext: { (peripheral) in
                     print(peripheral.debugDescription, "見つかった")
 //                    peripheral?.delegate = self
-//                    peripheral?.discoverServices(<#T##serviceUUIDs: [CBUUID]?##[CBUUID]?#>)
+                    peripheral?.discoverServices(<#T##serviceUUIDs: [CBUUID]?##[CBUUID]?#>)
                 }
             )
             .addDisposableTo(disposeBag)
